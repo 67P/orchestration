@@ -7,7 +7,7 @@ From OS X this can be installed from Brew:
     $ brew install fig
     ```
 
-    Or on Linux (or if you prefer pip):
+Or on Linux (or if you prefer pip):
     ```
     $ pip install fig
     ```
