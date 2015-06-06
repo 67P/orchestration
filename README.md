@@ -1,3 +1,13 @@
+# Kosmos Orchestration
+
+## [WIP] Not intended for public use yet
+
+We're in the process of migrating this to Docker Compose, testing it, and
+adding updated instructions for developers. If you want to help with that, ping
+us in #67p or #kosmos on Freenode.
+
+## Instructions (outdated)
+
 This repository include sone useful file: fig.yml
 
 This file is to be used by the Fig (http://fig.sh) which orchestrates Docker container startup.
