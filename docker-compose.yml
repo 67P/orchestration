@@ -2,10 +2,12 @@ hyperchannel:
   build: ../hyperchannel/
   ports:
     - "4200:4200"
+    - "49152:49152"
   volumes:
     - ../hyperchannel:/hyperchannel
-  links:
-    - sockethub
+
+redis:
+  image: redis:3.2.1
 
 sockethub:
   build: ../sockethub/
@@ -15,6 +17,7 @@ sockethub:
     - ../sockethub:/sockethub
   links:
     - irc
+    - redis
 
 irc:
   image: nikomo/ircd-hybrid
