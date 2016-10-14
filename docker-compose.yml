@@ -1,0 +1,25 @@
+hyperchannel:
+  build: ../hyperchannel/
+  ports:
+    - "4200:4200"
+    - "49152:49152"
+  volumes:
+    - ../hyperchannel:/hyperchannel
+
+redis:
+  image: redis:3.2.1
+
+sockethub:
+  build: ../sockethub/
+  ports:
+    - "10550:10550"
+  volumes:
+    - ../sockethub:/sockethub
+  links:
+    - irc
+    - redis
+
+irc:
+  image: nikomo/ircd-hybrid
+  expose:
+    - "6667"
